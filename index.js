@@ -1,8 +1,42 @@
-const imagens = document.querySelectorAll('.imagem');
-imagens.forEach(imagem => {
-    const tamanhoAleatorio = Math.floor(Math.random() * 150) + 150;
-    imagem.style.width = `${tamanhoAleatorio}px`;
-    imagem.style.height = 'auto';
+// Array de URLs das imagens
+const imageUrls = [
+    './imgs/1.jpeg',
+    './imgs/2.jpeg',
+    './imgs/3.png',
+    './imgs/4.jpeg',
+    './imgs/5.jpeg',
+    './imgs/6.jpeg',
+    './imgs/7.jpeg',
+    './imgs/8.jpeg',
+    './imgs/9.jpeg',
+    './imgs/10.jpeg',
+    './imgs/11.jpeg'
+    // Adicione mais URLs conforme necessário
+];
+
+// Array de mensagens
+const mensagens = [
+    'Esse é o presente do seu amigo Matheus 😁',
+    'Espero que goste é que ele possa te encontrar sempre que sintir saudades',
+    'Continue descendo para mais! 🎈',
+];
+
+// Função para gerar imagens dinamicamente
+const albumDiv = document.getElementById('album');
+imageUrls.forEach((url, index) => {
+    const img = document.createElement('img');
+    img.classList.add('imagem');
+    img.src = url;
+    img.alt = `Imagem ${index + 1}`;
+    albumDiv.appendChild(img);
+
+    // Insere uma mensagem a cada 3 imagens
+    if ((index + 1) % 3 === 0 && mensagens.length > 0) {
+        const msg = document.createElement('p');
+        msg.classList.add('mensagem');
+        msg.textContent = mensagens.shift(); // Remove a primeira mensagem do array
+        albumDiv.appendChild(msg);
+    }
 });
 
 // Função para verificar se um elemento está visível na viewport
@@ -16,22 +50,28 @@ function isInViewport(element) {
     );
 }
 
-// Função para adicionar a classe 'visible' às mensagens quando a seção do álbum se torna visível
-function handleScroll() {
-    const albumSection = document.querySelector('.album');
-    const mensagens = document.querySelectorAll('.mensagem');
-}
-
-
+// Função para adicionar a classe 'visible' às imagens e mensagens ao rolarem para a viewport
 function handleScroll() {
     const imagens = document.querySelectorAll('.imagem');
+    const mensagens = document.querySelectorAll('.mensagem');
+
+    // Verifica se as imagens estão na viewport e as torna visíveis
     imagens.forEach(imagem => {
         if (isInViewport(imagem)) {
             imagem.classList.add('visible');
         }
     });
+
+    // Verifica se as mensagens estão na viewport e as torna visíveis
+    mensagens.forEach(mensagem => {
+        if (isInViewport(mensagem)) {
+            mensagem.classList.add('visible');
+        }
+    });
 }
 
+// Adiciona o evento de scroll
 window.addEventListener('scroll', handleScroll);
 
+// Chama a função handleScroll ao carregar a página
 document.addEventListener('DOMContentLoaded', handleScroll);

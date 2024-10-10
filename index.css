@@ -13,9 +13,21 @@ main {
 }
 
 h2 {
-    border-bottom: 2px solid #ccc; /* Linha abaixo do título */
-    padding-bottom: 10px; /* Espaço abaixo do título */
-    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #FF69B4; /* Cor rosa */
+    border-bottom: 2px solid #FF69B4; /* Linha abaixo do título na mesma cor */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    font-family: 'Arial', sans-serif; /* Fonte personalizada */
+    font-size: 28px; /* Aumenta o tamanho da fonte */
+}
+
+/* Exemplo com gradiente de cores */
+h2.gradient {
+    background: linear-gradient(to right, #FF69B4, #FFD700); /* Gradiente de rosa para dourado */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none; /* Remove a sombra quando usar gradiente */
 }
 
 .imagem {

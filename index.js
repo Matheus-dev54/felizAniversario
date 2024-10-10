@@ -16,8 +16,8 @@ const imageUrls = [
 
 // Array de mensagens
 const mensagens = [
-    'Aqui está sua primeira surpresa! 🎉',
-    'Esperamos que você goste! 🎁',
+    'Esse é o presente do seu amigo Matheus 😁',
+    'Espero que goste é que ele possa te encontrar sempre que sintir saudades',
     'Continue descendo para mais! 🎈',
 ];
 

@@ -18,13 +18,6 @@ h2 {
     margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
-.album {
-    display: flex; /* Usar flexbox para alinhar as imagens */
-    flex-wrap: wrap; /* Permitir que as imagens quebrem para a próxima linha */
-    gap: 15px; /* Espaçamento entre as imagens */
-    justify-content: center; /* Centraliza as imagens */
-}
-
 .imagem {
     opacity: 0; /* Imagens inicialmente invisíveis */
     transform: translateY(20px); /* Mover para baixo um pouco */

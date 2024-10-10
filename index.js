@@ -1,3 +1,55 @@
+// Array de URLs das imagens
+const imageUrls = [
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png',
+    './imgs/media.png'
+    // Adicione mais URLs conforme necessário
+];
+
+// Array de mensagens
+const mensagens = [
+    'Aqui está sua primeira surpresa! 🎉',
+    'Esperamos que você goste! 🎁',
+    'Continue descendo para mais! 🎈',
+];
+
+// Função para gerar imagens dinamicamente
+const albumDiv = document.getElementById('album');
+imageUrls.forEach((url, index) => {
+    const img = document.createElement('img');
+    img.classList.add('imagem');
+    img.src = url;
+    img.alt = `Imagem ${index + 1}`;
+    albumDiv.appendChild(img);
+
+    // Insere uma mensagem a cada 3 imagens, ou conforme o critério desejado
+    if ((index + 1) % 3 === 0 && mensagens.length > 0) {
+        const msg = document.createElement('p');
+        msg.classList.add('mensagem');
+        msg.textContent = mensagens.shift(); // Remove a primeira mensagem do array
+        albumDiv.appendChild(msg);
+    }
+});
+
+// Função para gerar as mensagens adicionais (caso tenha)
+const mensagensDiv = document.getElementById('mensagens');
+mensagens.forEach((mensagem, index) => {
+    const mensagemDiv = document.createElement('div');
+    mensagemDiv.classList.add('mensagem');
+    const p = document.createElement('p');
+    p.textContent = `Mensagem ${index + 1}: ${mensagem}`;
+    mensagemDiv.appendChild(p);
+    mensagensDiv.appendChild(mensagemDiv);
+});
+
 const imagens = document.querySelectorAll('.imagem');
 imagens.forEach(imagem => {
     const tamanhoAleatorio = Math.floor(Math.random() * 150) + 150;

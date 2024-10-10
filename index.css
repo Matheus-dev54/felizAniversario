@@ -26,6 +26,8 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    width: 30%; /* Largura máxima de cada imagem */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .imagem.visible {
@@ -56,23 +58,17 @@ a:hover {
     color: #004999; /* Cor do link ao passar o mouse */
 }
 
-
 .mensagem {
     opacity: 0; /* Mensagens inicialmente invisíveis */
     transform: translateY(20px); /* Mover para baixo um pouco */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
-}
-
-.mensagem.visible {
-    opacity: 1; /* Tornar a mensagem visível */
-    transform: translateY(0); /* Retorna à posição original */
-}
-
-.mensagem {
-    opacity: 0; /* Inicialmente invisível */
-    transform: translateY(20px); /* Mover um pouco para baixo */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
     margin-top: 10px; /* Espaço entre mensagens */
+    text-align: center; /* Centralizar o texto das mensagens */
+    font-size: 1.2em; /* Aumentar o tamanho do texto das mensagens */
+    background-color: #fff; /* Cor de fundo das mensagens */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra nas mensagens */
 }
 
 .mensagem.visible {
@@ -80,11 +76,23 @@ a:hover {
     transform: translateY(0); /* Retornar à posição original */
 }
 
-
 .album {
     display: flex; /* Usar flexbox para o álbum */
     flex-wrap: wrap; /* Permitir que as imagens quebrem para a próxima linha */
     gap: 15px; /* Espaçamento entre as imagens */
     justify-content: center; /* Centralizar as imagens */
     margin-bottom: 30px; /* Espaço abaixo do álbum */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .imagem {
+        width: 45%; /* Ajusta para 2 imagens por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .imagem {
+        width: 100%; /* Uma imagem por linha em telas muito pequenas */
+    }
 }

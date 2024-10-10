@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Cor de fundo leve */
+    color: #333; /* Cor do texto */
+}
+
+main {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px; /* Espaçamento interno */
+}
+
+h2 {
+    border-bottom: 2px solid #ccc; /* Linha abaixo do título */
+    padding-bottom: 10px; /* Espaço abaixo do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.album {
+    display: flex; /* Usar flexbox para alinhar as imagens */
+    flex-wrap: wrap; /* Permitir que as imagens quebrem para a próxima linha */
+    gap: 15px; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centraliza as imagens */
+}
+
+.imagem {
+    opacity: 0; /* Imagens inicialmente invisíveis */
+    transform: translateY(20px); /* Mover para baixo um pouco */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.imagem.visible {
+    opacity: 1; /* Tornar a imagem visível */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+.imagem:hover {
+    transform: scale(1.05); /* Aumenta o zoom ao passar o mouse */
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding da lista */
+}
+
+li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #0066cc; /* Cor do link */
+    transition: color 0.2s; /* Transição suave para a cor */
+}
+
+a:hover {
+    color: #004999; /* Cor do link ao passar o mouse */
+}
+
+
+.mensagem {
+    opacity: 0; /* Mensagens inicialmente invisíveis */
+    transform: translateY(20px); /* Mover para baixo um pouco */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
+}
+
+.mensagem.visible {
+    opacity: 1; /* Tornar a mensagem visível */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+.mensagem {
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Mover um pouco para baixo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
+    margin-top: 10px; /* Espaço entre mensagens */
+}
+
+.mensagem.visible {
+    opacity: 1; /* Tornar a mensagem visível */
+    transform: translateY(0); /* Retornar à posição original */
+}
+
+
+.album {
+    display: flex; /* Usar flexbox para o álbum */
+    flex-wrap: wrap; /* Permitir que as imagens quebrem para a próxima linha */
+    gap: 15px; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centralizar as imagens */
+    margin-bottom: 30px; /* Espaço abaixo do álbum */
+}

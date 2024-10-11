@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="animacao.css">
+</head>
+<body>
+    <div class="inicio" id="inicio">
+        <h1>Bem-vinda</h1>
+        <p>Coloque Seus Fones.</p>
+        <p>Espero Que Estas Lembraças Do Passado Te Encontrem Bem No Futuro.</p>
+        <button id="comecarBtn">Começar</button>
+    </div>
+
+    <main style="display:none;"> <!-- Oculta o conteúdo principal inicialmente -->
+        <section>
+            <h2>Para Minha Amiga Mel</h2>
+            <div class="album" id="album"></div>
+        </section>
+    
+        <section>
+            <h2>Mensagens</h2>
+            <div class="mensagens" id="mensagens"></div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+    <script>
+        // Lógica para redirecionar para outra página
+        document.getElementById('comecarBtn').addEventListener('click', function() {
+            window.location.href = '../index.html'; // Altere para o caminho da página desejada
+        });
+    </script>
+</body>
+</html>

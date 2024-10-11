@@ -3,7 +3,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0; /* Cor de fundo leve */
-    color: #333; /* Cor do texto */
+    color: black;
+    background-color: #fef7e1;
+}
+
+@font-face {
+    font-family: 'MinhaFonte'; /* Nome que você dará à fonte */
+    src: url('./Glam_Queen/Glam_Queen.ttf') format('woff2'), /* Caminho para o arquivo */
+         url('./Glam_Queen/Glam_Queen.ttf') format('woff'); /* Você pode incluir vários formatos */
+    font-weight: normal; /* Peso da fonte */
+    font-style: normal; /* Estilo da fonte */
 }
 
 main {
@@ -13,31 +22,36 @@ main {
 }
 
 h2 {
-    color: #FF69B4; /* Cor rosa */
-    border-bottom: 2px solid #FF69B4; /* Linha abaixo do título na mesma cor */
+    color: #075c97; /* Cor rosa */
+    border-bottom: 2px solid #075c97; /* Linha abaixo do título na mesma cor */
     padding-bottom: 10px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
     font-family: 'Arial', sans-serif; /* Fonte personalizada */
     font-size: 28px; /* Aumenta o tamanho da fonte */
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-/* Exemplo com gradiente de cores */
-h2.gradient {
-    background: linear-gradient(to right, #FF69B4, #FFD700); /* Gradiente de rosa para dourado */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none; /* Remove a sombra quando usar gradiente */
+p {
+    font-size: 1.2em; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+    text-align: justify; /* Justifica o texto */
+    color: #555; /* Cor do texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-family: 'Glam_Queen';
 }
 
 .imagem {
-    opacity: 0; /* Imagens inicialmente invisíveis */
+    opacity: 0;
     transform: translateY(20px); /* Mover para baixo um pouco */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
     border: 5px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    border: 5px solid #396eb0;
     width: 30%; /* Largura máxima de cada imagem */
     height: auto; /* Mantém a proporção da imagem */
 }
@@ -62,12 +76,12 @@ li {
 
 a {
     text-decoration: none; /* Remove o sublinhado */
-    color: #0066cc; /* Cor do link */
+    color: #2b5f9e; /* Cor do link */
     transition: color 0.2s; /* Transição suave para a cor */
 }
 
 a:hover {
-    color: #004999; /* Cor do link ao passar o mouse */
+    color: #2b5f9e; /* Cor do link ao passar o mouse */
 }
 
 .mensagem {
@@ -81,6 +95,8 @@ a:hover {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra nas mensagens */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 .mensagem.visible {
@@ -95,6 +111,8 @@ a:hover {
     justify-content: center; /* Centralizar as imagens */
     margin-bottom: 30px; /* Espaço abaixo do álbum */
 }
+
+
 
 /* Responsividade */
 @media (max-width: 768px) {

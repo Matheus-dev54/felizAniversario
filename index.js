@@ -64,6 +64,8 @@ const mensagens = [
 const shuffledImageUrls = shuffleArray(imageUrls);
 const albumDiv = document.getElementById('album');
 
+const imageSpacing = 10;
+
 shuffledImageUrls.forEach((url, index) => {
     const img = document.createElement('img');
     img.classList.add('imagem');
@@ -71,7 +73,8 @@ shuffledImageUrls.forEach((url, index) => {
     img.alt = `Imagem ${index + 1}`;
     albumDiv.appendChild(img);
 
-    if ((index + 1) % 3 === 0 && mensagens.length > 0) {
+    // Usar a constante para controlar a frequência das mensagens
+    if ((index + 1) % imageSpacing === 0 && mensagens.length > 0) {
         const msg = document.createElement('p');
         msg.classList.add('mensagem');
         msg.textContent = mensagens.shift();

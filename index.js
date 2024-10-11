@@ -1,5 +1,6 @@
 const musicUrls = [
     './musicas/Yellow.mp3',
+    './musicas/The Night We Met.mp3'
 ];
 
 const audio = document.getElementById('background-music');
@@ -25,6 +26,8 @@ function shuffleArray(array) {
     }
     return array;
 }
+
+
 
 const imageUrls = [
     './imgs/1.jpeg',
@@ -66,7 +69,6 @@ const imageUrls = [
     './imgs/41.jpeg',
     './imgs/42.jpeg',
     './imgs/43.jpeg',
-    './imgs/44.jpeg',
     './imgs/45.jpeg',
     './imgs/46.jpeg',
     './imgs/47.jpeg',
@@ -127,11 +129,25 @@ const mensagens = [
     'Que Este Álbum De Fotografias Se Constitua Em Uma Lembrança Duradoura De Todos Os Momentos Inesquecíveis Que Compartilhamos.'
 ];
 
-const shuffledImageUrls = shuffleArray(imageUrls);
-const albumDiv = document.getElementById('album');
+const fixedImageStartUrl = './imgs/44.jpeg'; // Caminho da imagem 44 (fixa no início)
+const fixedImageEndUrl = './imgs/5.jpeg'; // Caminho da imagem 5 (fixa no final)
 
+// Filtra o array para remover as imagens fixas
+const filteredImageUrls = imageUrls.filter(url => url !== fixedImageStartUrl && url !== fixedImageEndUrl);
+
+const shuffledImageUrls = shuffleArray(filteredImageUrls); // Embaralha as imagens restantes
+
+const albumDiv = document.getElementById('album');
 const imageSpacing = 10;
 
+// Adiciona a imagem 44 fixa no início
+const fixedStartImg = document.createElement('img');
+fixedStartImg.classList.add('imagem');
+fixedStartImg.src = fixedImageStartUrl;
+fixedStartImg.alt = 'Imagem 44';
+albumDiv.appendChild(fixedStartImg);
+
+// Adiciona as imagens embaralhadas
 shuffledImageUrls.forEach((url, index) => {
     const img = document.createElement('img');
     img.classList.add('imagem');
@@ -146,6 +162,15 @@ shuffledImageUrls.forEach((url, index) => {
         albumDiv.appendChild(msg);
     }
 });
+
+// Adiciona a imagem 5 fixa no final
+const fixedEndImg = document.createElement('img');
+fixedEndImg.classList.add('imagem');
+fixedEndImg.src = fixedImageEndUrl;
+fixedEndImg.alt = 'Imagem 5';
+albumDiv.appendChild(fixedEndImg);
+
+
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();

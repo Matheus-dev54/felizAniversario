@@ -3,7 +3,6 @@ const musicUrls = [
     './musicas/The Night We Met.mp3'
 ];
 
-// Adiciona evento de clique ao botão "Próxima Música"
 document.getElementById('next-track').addEventListener('click', playNextTrack);
 
 const audio = document.getElementById('background-music');
@@ -13,13 +12,11 @@ function playNextTrack() {
     audio.src = musicUrls[currentTrack];
     audio.play();
 
-    currentTrack = (currentTrack + 1) % musicUrls.length; // Volta ao início quando terminar
+    currentTrack = (currentTrack + 1) % musicUrls.length;
 }
 
-// Toca a próxima música quando a atual termina
 audio.addEventListener('ended', playNextTrack);
 
-// Adiciona evento de clique ao botão
 document.getElementById('play-music').addEventListener('click', playNextTrack);
 
 function shuffleArray(array) {
@@ -127,25 +124,22 @@ const mensagens = [
     'Espero Que Encontre Aquilo Que Procura No Mundo'
 ];
 
-const fixedImageStartUrl = './imgs/44.jpeg'; // Caminho da imagem 44 (fixa no início)
-const fixedImageEndUrl = './imgs/72.jpeg'; // Caminho da imagem 5 (fixa no final)
+const fixedImageStartUrl = './imgs/44.jpeg';
+const fixedImageEndUrl = './imgs/72.jpeg';
 
-// Filtra o array para remover as imagens fixas
 const filteredImageUrls = imageUrls.filter(url => url !== fixedImageStartUrl && url !== fixedImageEndUrl);
 
-const shuffledImageUrls = shuffleArray(filteredImageUrls); // Embaralha as imagens restantes
+const shuffledImageUrls = shuffleArray(filteredImageUrls);
 
 const albumDiv = document.getElementById('album');
 const imageSpacing = 10;
 
-// Adiciona a imagem 44 fixa no início
 const fixedStartImg = document.createElement('img');
 fixedStartImg.classList.add('imagem');
 fixedStartImg.src = fixedImageStartUrl;
 fixedStartImg.alt = 'Imagem 44';
 albumDiv.appendChild(fixedStartImg);
 
-// Adiciona as imagens embaralhadas
 shuffledImageUrls.forEach((url, index) => {
     const img = document.createElement('img');
     img.classList.add('imagem');

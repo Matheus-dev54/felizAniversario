@@ -6,15 +6,6 @@ const musicUrls = [
 const audio = document.getElementById('background-music');
 let currentTrack = 0;
 
-function playNextTrack() {
-    audio.src = musicUrls[currentTrack];
-    audio.play();
-
-    currentTrack = (currentTrack + 1) % musicUrls.length;
-}
-
-audio.addEventListener('ended', playNextTrack);
-
 document.getElementById('play-music').addEventListener('click', playNextTrack);
 
 function shuffleArray(array) {

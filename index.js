@@ -1,6 +1,7 @@
 const musicUrls = [
     './musicas/Yellow.mp3',
-    './musicas/The Night We Met.mp3'
+    './musicas/The Night We Met.mp3',
+    './musicas/mac miller.mp3'
 ];
 
 const audio = document.getElementById('background-music');

@@ -33,7 +33,6 @@ function shuffleArray(array) {
 
 
 const imageUrls = [
-    './imgs/1.jpeg',
     './imgs/2.jpeg',
     './imgs/4.jpeg',
     './imgs/5.jpeg',
@@ -67,7 +66,6 @@ const imageUrls = [
     './imgs/34.jpeg',
     './imgs/37.jpeg',
     './imgs/38.jpeg',
-    './imgs/39.jpeg',
     './imgs/40.jpeg',
     './imgs/41.jpeg',
     './imgs/42.jpeg',
@@ -124,12 +122,12 @@ const imageUrls = [
 const mensagens = [
     'Esse é o Presente Do Seu Amigo Matheus 😁',
     'Aqui Estão Alguns Dos Melhores Momentos Do Nosso Grupo😊',
-    'Espero Que Ele Possa Te Encontrar Sempre Que Sentir Saudades',
-    'Uma Pequena Parte De Nossa História, Que Ainda Esta só Começando🤠',
+    'Espero Que Eles Possam Te Encontrar Sempre Que Sentir Saudades',
     'Existe Uma Frase Que Diz "Somos aquilo que permitimos ser transformados pelos outros."',
     'Tenha A Certeza que Você Transformou Uma Parte Em Cada Um De Nós',
+    'Criando Uma Pequena Parte De Nossa História, Que Ainda Esta só Começando🤠',
     'Agradeço Por Todas As Nossas Memorias, Momentos E Risadas!',
-    'Que Este Álbum De Fotografias Se Constitua Em Uma Lembrança Duradoura De Todos Os Momentos Inesquecíveis Que Compartilhamos.'
+    'Espero Que Encontre Oque Procura No Mundo'
 ];
 
 const fixedImageStartUrl = './imgs/44.jpeg'; // Caminho da imagem 44 (fixa no início)

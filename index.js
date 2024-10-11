@@ -6,6 +6,14 @@ const musicUrls = [
 const audio = document.getElementById('background-music');
 let currentTrack = 0;
 
+audio.src = musicUrls[currentTrack];
+
+function playMusic() {
+    audio.play();
+}
+
+document.getElementById('play-music').addEventListener('click', playMusic);
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));

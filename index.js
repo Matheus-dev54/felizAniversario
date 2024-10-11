@@ -1,4 +1,11 @@
-// Array de URLs das imagens
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 const imageUrls = [
     './imgs/1.jpeg',
     './imgs/2.jpeg',
@@ -11,42 +18,47 @@ const imageUrls = [
     './imgs/9.jpeg',
     './imgs/10.jpeg',
     './imgs/11.jpeg'
-    // Adicione mais URLs conforme necessário
 ];
 
-// Array de mensagens
 const mensagens = [
-    'Esse é o presente do seu amigo Matheus 😁',
-    'Espero que goste é que ele possa te encontrar sempre que sintir saudades',
-    'Continue descendo para mais! 🎈',
+    'Esse é o Presente Do Seu Amigo Matheus 😁',
+    'Espero Que Ele Possa Te Encontrar Sempre Que Sentir Saudades',
+    'Agradeço Por Todas As Nossas Memorias!',
+    'Aqui Estão Os Melhores Momentos Do Nosso Grupo😊',
+    'Fico Extremamente Feliz Em Poder Compartilhar Momentos Únicos Com Você',
 ];
 
-// Função para gerar imagens dinamicamente
+const shuffledImageUrls = shuffleArray(imageUrls);
 const albumDiv = document.getElementById('album');
-imageUrls.forEach((url, index) => {
+
+shuffledImageUrls.forEach((url, index) => {
     const img = document.createElement('img');
     img.classList.add('imagem');
     img.src = url;
     img.alt = `Imagem ${index + 1}`;
     albumDiv.appendChild(img);
 
-    // Insere uma mensagem a cada 3 imagens
     if ((index + 1) % 3 === 0 && mensagens.length > 0) {
         const msg = document.createElement('p');
         msg.classList.add('mensagem');
-        msg.textContent = mensagens.shift(); // Remove a primeira mensagem do array
+        msg.textContent = mensagens.shift();
         albumDiv.appendChild(msg);
     }
 });
 
+
 // Função para verificar se um elemento está visível na viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+    
+    // Considera que o elemento está visível se pelo menos 50% dele estiver na viewport
     return (
-        rect.top >= 0 &&
+        rect.top + rect.height * 0.5 >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.bottom - rect.height * 0.5 <= windowHeight &&
+        rect.right <= windowWidth
     );
 }
 

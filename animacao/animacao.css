@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
+    background-image: url(../imgs/back.jpeg);
+    background-size: cover;
+    background-position: center;
 }
 
 .inicio {
@@ -12,8 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh; /* Ocupa toda a altura da tela */
-    background-color: #2b5f9e; /* Cor de fundo */
-    color: white; /* Cor do texto */
+    color: rgb(49, 49, 49); /* Cor do texto */
     text-align: center;
     animation: fadeIn 1s ease; /* Animação de entrada */
 }
@@ -21,12 +23,16 @@ body {
 button {
     padding: 10px 20px;
     font-size: 1.2em;
-    color: white;
-    background-color: #ff69b4; /* Cor do botão */
+    color: rgb(49, 49, 49);
+    background-color: #a2d3c7; /* Cor do botão */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+p{
+    font-weight: bold;
 }
 
 button:hover {

@@ -3,6 +3,9 @@ const musicUrls = [
     './musicas/The Night We Met.mp3'
 ];
 
+// Adiciona evento de clique ao botão "Próxima Música"
+document.getElementById('next-track').addEventListener('click', playNextTrack);
+
 const audio = document.getElementById('background-music');
 let currentTrack = 0;
 

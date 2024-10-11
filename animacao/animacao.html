@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bem-vinda</title>
     <link rel="stylesheet" href="animacao.css">
 </head>
 <body>
@@ -14,23 +14,9 @@
         <button id="comecarBtn">Começar</button>
     </div>
 
-    <main style="display:none;"> <!-- Oculta o conteúdo principal inicialmente -->
-        <section>
-            <h2>Para Minha Amiga Mel</h2>
-            <div class="album" id="album"></div>
-        </section>
-    
-        <section>
-            <h2>Mensagens</h2>
-            <div class="mensagens" id="mensagens"></div>
-        </section>
-    </main>
-
-    <script src="index.js"></script>
     <script>
-        // Lógica para redirecionar para outra página
         document.getElementById('comecarBtn').addEventListener('click', function() {
-            window.location.href = '../index.html'; // Altere para o caminho da página desejada
+            window.location.href = '../index.html'; // Corrigido para o caminho correto
         });
     </script>
 </body>

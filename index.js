@@ -1,3 +1,23 @@
+const musicUrls = [
+    './musicas/Yellow.mp3',
+];
+
+const audio = document.getElementById('background-music');
+let currentTrack = 0;
+
+function playNextTrack() {
+    audio.src = musicUrls[currentTrack];
+    audio.play();
+
+    currentTrack = (currentTrack + 1) % musicUrls.length; // Volta ao início quando terminar
+}
+
+// Toca a próxima música quando a atual termina
+audio.addEventListener('ended', playNextTrack);
+
+// Adiciona evento de clique ao botão
+document.getElementById('play-music').addEventListener('click', playNextTrack);
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -87,7 +107,6 @@ const imageUrls = [
     './imgs/82.jpeg',
     './imgs/83.jpeg',
     './imgs/84.jpeg',
-    './imgs/86.jpeg',
     './imgs/87.jpeg',
     './imgs/88.jpeg',
     './imgs/89.jpeg',
@@ -102,16 +121,16 @@ const mensagens = [
     'Aqui Estão Alguns Dos Melhores Momentos Do Nosso Grupo😊',
     'Espero Que Ele Possa Te Encontrar Sempre Que Sentir Saudades',
     'Uma Pequena Parte De Nossa História, Que Ainda Esta só Começando🤠',
-    'Existe Uma Frase Que Diz "A convivência transforma; somos aquilo que permitimos ser transformados pelos outros."',
+    'Existe Uma Frase Que Diz "Somos aquilo que permitimos ser transformados pelos outros."',
     'Tenha A Certeza que Você Transformou Uma Parte Em Cada Um De Nós',
-    'Agradeço Por Todas As Nossas Memorias!',
+    'Agradeço Por Todas As Nossas Memorias, Momentos E Risadas!',
     'Que Este Álbum De Fotografias Se Constitua Em Uma Lembrança Duradoura De Todos Os Momentos Inesquecíveis Que Compartilhamos.'
 ];
 
 const shuffledImageUrls = shuffleArray(imageUrls);
 const albumDiv = document.getElementById('album');
 
-const imageSpacing = 15;
+const imageSpacing = 10;
 
 shuffledImageUrls.forEach((url, index) => {
     const img = document.createElement('img');

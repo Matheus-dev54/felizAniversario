@@ -30,8 +30,6 @@ function shuffleArray(array) {
     return array;
 }
 
-
-
 const imageUrls = [
     './imgs/2.jpeg',
     './imgs/4.jpeg',
@@ -127,7 +125,7 @@ const mensagens = [
     'Tenha A Certeza que Você Transformou Uma Parte Em Cada Um De Nós',
     'Criando Uma Pequena Parte De Nossa História, Que Ainda Esta só Começando🤠',
     'Agradeço Por Todas As Nossas Memorias, Momentos E Risadas!',
-    'Espero Que Encontre Oque Procura No Mundo'
+    'Espero Que Encontre Aquilo Que Procura No Mundo'
 ];
 
 const fixedImageStartUrl = './imgs/44.jpeg'; // Caminho da imagem 44 (fixa no início)

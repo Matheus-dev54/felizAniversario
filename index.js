@@ -3,8 +3,6 @@ const musicUrls = [
     './musicas/The Night We Met.mp3'
 ];
 
-document.getElementById('next-track').addEventListener('click', playNextTrack);
-
 const audio = document.getElementById('background-music');
 let currentTrack = 0;
 

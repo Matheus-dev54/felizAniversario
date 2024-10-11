@@ -14,17 +14,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Ocupa toda a altura da tela */
-    color: rgb(49, 49, 49); /* Cor do texto */
+    height: 100vh;
+    color: rgb(49, 49, 49);
     text-align: center;
-    animation: fadeIn 1s ease; /* Animação de entrada */
+    animation: fadeIn 1s ease;
 }
 
 button {
     padding: 10px 20px;
     font-size: 1.2em;
     color: rgb(49, 49, 49);
-    background-color: #a2d3c7; /* Cor do botão */
+    background-color: #a2d3c7;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -36,13 +36,13 @@ p{
 }
 
 button:hover {
-    background-color: #ff1493; /* Cor do botão ao passar o mouse */
+    background-color: #ff1493;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-20px); /* Animação de subida */
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;

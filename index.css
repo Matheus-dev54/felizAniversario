@@ -1,128 +1,190 @@
 body {
-    font-family: Arial, sans-serif; /* Fonte padrão */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Cor de fundo leve */
-    color: black;
     background-color: #fef7e1;
+    color: black;
 }
 
 @font-face {
-    font-family: 'MinhaFonte'; /* Nome que você dará à fonte */
-    src: url('./Glam_Queen/Glam_Queen.ttf') format('woff2'), /* Caminho para o arquivo */
-         url('./Glam_Queen/Glam_Queen.ttf') format('woff'); /* Você pode incluir vários formatos */
-    font-weight: normal; /* Peso da fonte */
-    font-style: normal; /* Estilo da fonte */
+    font-family: 'MinhaFonte';
+    src: url('./Glam_Queen/Glam_Queen.ttf') format('woff2'),
+         url('./Glam_Queen/Glam_Queen.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 main {
-    max-width: 1200px; /* Largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
-    padding: 20px; /* Espaçamento interno */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h2 {
-    color: #075c97; /* Cor rosa */
-    border-bottom: 2px solid #075c97; /* Linha abaixo do título na mesma cor */
+    color: #075c97;
+    border-bottom: 2px solid #075c97;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
-    font-family: 'Arial', sans-serif; /* Fonte personalizada */
-    font-size: 28px; /* Aumenta o tamanho da fonte */
-    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    text-align: center;
+}
+
+h4 {
+    color: #075c97;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    text-align: center;
+    position: relative;
+}
+
+h4::after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #075c97;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
 }
 
 p {
-    font-size: 1.2em; /* Tamanho da fonte */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin: 20px 0; /* Espaçamento acima e abaixo */
-    text-align: justify; /* Justifica o texto */
-    color: #555; /* Cor do texto */
-    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: justify;
+    color: #555;
+    border-radius: 8px;
     font-family: 'Glam_Queen';
 }
 
 .imagem {
     opacity: 0;
-    transform: translateY(20px); /* Mover para baixo um pouco */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
-    border: 5px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
     border: 5px solid #396eb0;
-    width: 30%; /* Largura máxima de cada imagem */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 30%;
+    height: auto;
 }
 
 .imagem.visible {
-    opacity: 1; /* Tornar a imagem visível */
-    transform: translateY(0); /* Retorna à posição original */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .imagem:hover {
-    transform: scale(1.05); /* Aumenta o zoom ao passar o mouse */
+    transform: scale(1.05);
 }
 
 ul {
-    list-style-type: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o padding da lista */
+    list-style-type: none;
+    padding: 0;
 }
 
 li {
-    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+    margin-bottom: 10px;
 }
 
 a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #2b5f9e; /* Cor do link */
-    transition: color 0.2s; /* Transição suave para a cor */
+    text-decoration: none;
+    color: #2b5f9e;
+    transition: color 0.2s;
 }
 
 a:hover {
-    color: #2b5f9e; /* Cor do link ao passar o mouse */
+    color: #2b5f9e;
 }
 
 .mensagem {
-    opacity: 0; /* Mensagens inicialmente invisíveis */
-    transform: translateY(20px); /* Mover para baixo um pouco */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transições suaves */
-    margin-top: 10px; /* Espaço entre mensagens */
-    text-align: center; /* Centralizar o texto das mensagens */
-    font-size: 1.2em; /* Aumentar o tamanho do texto das mensagens */
-    background-color: #fff; /* Cor de fundo das mensagens */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #fff;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra nas mensagens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
 
 .mensagem.visible {
-    opacity: 1; /* Tornar a mensagem visível */
-    transform: translateY(0); /* Retornar à posição original */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .album {
-    display: flex; /* Usar flexbox para o álbum */
-    flex-wrap: wrap; /* Permitir que as imagens quebrem para a próxima linha */
-    gap: 15px; /* Espaçamento entre as imagens */
-    justify-content: center; /* Centralizar as imagens */
-    margin-bottom: 30px; /* Espaço abaixo do álbum */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-
-
-/* Responsividade */
 @media (max-width: 768px) {
     .imagem {
-        width: 45%; /* Ajusta para 2 imagens por linha em telas menores */
+        width: 45%;
     }
 }
 
 @media (max-width: 480px) {
     .imagem {
-        width: 100%; /* Uma imagem por linha em telas muito pequenas */
+        width: 100%;
     }
+}
+
+#play-music {
+    background-color: #2b5f9e;
+    color: white;
+    width: 15vw;
+    height: 15vw;
+    font-size: 5vw;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#play-music:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+#play-music:active {
+    background-color: #e63e00;
+    transform: scale(0.98);
+}
+
+.play-icon {
+    display: inline-block;
+    font-size: inherit;
+    text-align: center;
+}
+
+.btnDiv {
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #5fdaff, #1053e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 20px 0;
 }

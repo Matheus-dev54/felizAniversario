@@ -95,7 +95,6 @@ const imageUrls = [
     './imgs/69.jpeg',
     './imgs/70.jpeg',
     './imgs/71.jpeg',
-    './imgs/72.jpeg',
     './imgs/73.jpeg',
     './imgs/74.jpeg',
     './imgs/75.jpeg',
@@ -129,7 +128,7 @@ const mensagens = [
 ];
 
 const fixedImageStartUrl = './imgs/44.jpeg'; // Caminho da imagem 44 (fixa no início)
-const fixedImageEndUrl = './imgs/5.jpeg'; // Caminho da imagem 5 (fixa no final)
+const fixedImageEndUrl = './imgs/72.jpeg'; // Caminho da imagem 5 (fixa no final)
 
 // Filtra o array para remover as imagens fixas
 const filteredImageUrls = imageUrls.filter(url => url !== fixedImageStartUrl && url !== fixedImageEndUrl);

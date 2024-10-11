@@ -188,3 +188,14 @@ a:hover {
     justify-content: center;
     display: flex;
 }
+
+
+h1 {
+    font-size: 48px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    background: linear-gradient(90deg, #5fdaff, #1053e6); /* Gradiente do texto */
+    -webkit-background-clip: text; /* Recorta o fundo do texto */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Margem superior e inferior */
+}
